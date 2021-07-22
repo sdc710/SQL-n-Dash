@@ -37,6 +37,7 @@ FROM
 (SELECT order_id, SUM(order_item_total) as individual_order_total
 FROM order_item
 WHERE order_id IN (10,11,12,23)
+GROUP BY order_id) as sql1 
 
 --Which item was ordered the most (biggest quantity sold)?
 SELECT item_name, SUM(order_item_quantity)
@@ -71,9 +72,3 @@ LEFT JOIN Menu ON item.menu_id=menu.menu_id
 GROUP BY menu_type
 ORDER BY Total_sum_per_menu_type DESC
 LIMIT 1 
-
- 
- 
- 
- 
- GROUP BY order
