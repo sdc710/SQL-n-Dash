@@ -1,4 +1,2 @@
 # SQL-project
-Project made with PostgreSQL
-
-Test
+ relational database management project made in postgreSQL
