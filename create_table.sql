@@ -1,4 +1,4 @@
---CUSTOMER TABLE--
+--CUSTOMER TABLE--------------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE Customer (
 Customer_id INTEGER PRIMARY KEY,
 Customer_fname VARCHAR(30) NOT NULL,
@@ -21,7 +21,7 @@ VALUES
 (1661,'Leanna','Merritt' ,'Leanna.Merritt@hotmail.com','987-354-0863', '333 De La Montagne'),
 (5758, 'Dave' ,'Schmidt', 'Daveschmidt@hotmail.com','643-653-5532','132 Durocher');
 
---DRIVER TABLE--
+--DRIVER TABLE----------------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE Driver (
 Driver_id INTEGER PRIMARY KEY,
 Driver_fname VARCHAR(30) NOT NULL,
@@ -42,7 +42,7 @@ VALUES
 (768766,'Andros','MacKibbon','amackibbon8@delicious.com','149-252-3689'),
 (687598,'Garvey','Kimmons','gkimmons9@admin.ch','381-984-7975');
 
---PAYMENT TABLE--
+--PAYMENT TABLE---------------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE Payment (
 Payment_id INTEGER PRIMARY KEY,
 Payment_type VARCHAR(10) NOT NULL
@@ -53,7 +53,7 @@ VALUES
 (16220712,'Credit'),
 (16000811,'Cash');
 
---ORDERS TABLE--
+--ORDERS TABLE----------------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE Orders (
 Order_id SMALLINT PRIMARY KEY,
 Customer_id INTEGER NOT NULL,
@@ -82,7 +82,7 @@ VALUES
 (23,1983,327420,16261030,'2021-06-29'),
 (24,1491,687598,16220712,'2021-06-30');
 
---MENU TABLE--
+--MENU TABLE------------------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE Menu (
 Menu_id SMALLINT PRIMARY KEY,
 Menu_type VARCHAR (30) NOT NULL
@@ -95,7 +95,7 @@ VALUES
 (83,'Cambodian'),
 (84,'Thai');
 
---ITEM TABLE--
+--ITEM TABLE------------------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE Item (
 Item_id INTEGER PRIMARY KEY,
 Menu_id INTEGER NOT NULL,
@@ -117,7 +117,7 @@ VALUES
 (5002,84,'Pad Thai', 'Stir-Fried Rice Noodles ',8.50),
 (5003,84,'Bánh mì', 'Vietnamese Sandwich',7);
 
---ORDER_ITEM TABLE--
+--ORDER_ITEM TABLE------------------------------------------------------------------------------------------------------------------------------------------------------------
 CREATE TABLE Order_item (
 Order_id SMALLINT NOT NULL,
 Item_id INTEGER NOT NULL,
