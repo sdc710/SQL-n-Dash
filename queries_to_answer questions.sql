@@ -3,7 +3,7 @@ SELECT COUNT(DISTINCT(CONCAT(customer_fname, ' ', customer_lname)))
 FROM customer
 
 --Who is our most profitable customer and how much did he spend?--------------------------------------------------------------------------------------------------------------
-*Join order_item, orders, customer tables
+--Join order_item, orders, customer tables
 SELECT customer_fname, customer_lname, SUM(order_total) --STEP 3) To find the total amount spent by a customer
 FROM
 (SELECT sq1.order_id,order_total, customer_id --STEP 2) Subquery 2 to find which customer made the order
