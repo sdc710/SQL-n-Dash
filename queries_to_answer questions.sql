@@ -6,9 +6,9 @@ FROM customer
 --Join order_item, orders, customer tables
 SELECT customer_fname, customer_lname, SUM(order_total) --STEP 3) To find the total amount spent by a customer
 FROM
-(SELECT sq1.order_id,order_total, customer_id --STEP 2) derived 2 to find which customer made the order
+(SELECT sq1.order_id,order_total, customer_id --STEP 2) subquery 2 to find which customer made the order
 FROM
-(SELECT order_id, SUM(order_item_total) AS order_total --STEP 1) derived 1 to find the total price of an order
+(SELECT order_id, SUM(order_item_total) AS order_total --STEP 1) subquery 1 to find the total price of an order
 FROM order_item
 GROUP BY order_id) AS sq1 
 LEFT JOIN orders ON orders.order_id=sq1.order_id) AS sq2 
