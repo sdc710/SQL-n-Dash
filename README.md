@@ -1,5 +1,5 @@
-# **SQL-paper** contains the entire project
+# "SQL-paper.pdf" contains the entire project
 
-# **create_table** contains queries to create tables and insert data into them
+# "create_table.sql" contains queries to create tables and insert data into them
 
-# **queries to answer questions** contains queries to answer the business questions
+# "queries to answer questions.sql" contains queries to answer the business questions
